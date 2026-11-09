@@ -21,45 +21,13 @@
 - **벽돌 깨기**: 공·패들·벽돌 충돌 처리, 점수 및 목숨 표시
 - **보스전**: 플레이어·보스 체력 관리, 탄환 및 레이저 공격, 체력에 따른 공격 강화
 - **연출 및 편의 기능**: 타이핑 대화, 페이드 전환, 일시정지 및 재시작
-- 
-## 🚀 실행 방법
-
-### 1. 준비 사항
-
-- JDK 21
-- 그래픽 화면을 표시할 수 있는 데스크톱 환경
-- 최초 실행 시 Gradle 및 의존성을 다운로드할 인터넷 연결
-
-저장소를 내려받은 뒤 `gradlew`와 `settings.gradle`이 있는 프로젝트 루트에서 실행합니다. Gradle은 별도로 설치하지 않아도 됩니다.
 
 
-## ⚠️ 현재 시작 화면 설정
+## 🎮 게임 다운로드
 
-현재 `MainScreen.java`는 **양자리 보스전부터 바로 시작**하도록 설정되어 있습니다.
+[Windows 설치 파일 다운로드](https://github.com/zero-lee04/zero04-game/releases/latest/download/Zero04Game-1.0.0.exe)
 
-파일 위치:
-
-```text
-core/src/main/java/io/jbnu/hw1/MainScreen.java
-```
-
-현재 설정:
-
-```java
-setScreen(new AriesGame(this));
-```
-
-시작 화면부터 전체 흐름을 플레이하려면 위 코드를 다음과 같이 변경합니다.
-
-```java
-setScreen(new GamingScreen(this));
-```
-
-전체 진행 흐름:
-
-```text
-시작 화면 → 도입 대화 → Aquarius → 대화 → Pisces → 대화 → Aries → 엔딩 대화
-```
+다운로드한 EXE를 실행해 설치한 뒤, 바탕화면의 Zero04Game 바로가기로 게임을 실행하세요.
 
 ## ⌨️ 조작 방법
 
@@ -124,9 +92,9 @@ setScreen(new GamingScreen(this));
 │   │   ├── PiscesGame.java      # 물고기자리 벽돌 깨기
 │   │   ├── AriesGame.java       # 양자리 보스전
 │   │   ├── StadingPlayer.java   # 대기 애니메이션 (원본 클래스명)
-│   │   ├── RightMovingPlayer.java
-│   │   ├── JumpingPlayer.java
-│   │   ├── CrawlPlayer.java
+│   │   ├── RightMovingPlayer.java # 캐릭터 움직임 애니메이션
+│   │   ├── JumpingPlayer.java   # 캐릭터 점프 애니메이션
+│   │   ├── CrawlPlayer.java    # 캐릭터 기어가기 애니메이션
 │   │   ├── Portal.java          # 포털 애니메이션
 │   │   └── StarTexture.java     # 별 애니메이션
 │   └── build.gradle
